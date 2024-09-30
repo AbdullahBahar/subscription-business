@@ -1,0 +1,189 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  height: 100vh;  /* Ensure the body takes full height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content at the top */
+  align-items: center; /* Center horizontally */
+  padding: 0;
+  margin: 0;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.panel {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px 25px;
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  min-height: 80vh;  /* Ensure it takes up enough vertical space */
+  margin-top: 20px; /* Added a small margin to prevent sticking to the top */
+}
+
+.pricing-plan {
+  border-bottom: 1px solid #e1f1ff;
+}
+.pricing-plan:last-child {
+  border-bottom: none;
+}
+
+.pricing-img {
+  margin-bottom: 25px;
+  max-width: 100%;
+  max-height: 127.53;
+}
+ul {
+  list-style-type: none;
+}
+
+.pricing-header {
+  color: #888;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.pricing-features {
+  margin: 50px 0 25px;
+  color: #016ff9;
+}
+
+.pricing-features-item {
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  padding: 15px 0;
+  border-top: 1px solid #e1f1ff;
+}
+
+.pricing-features-item:last-child {
+  border-bottom: 1px solid #e1f1ff;
+ 
+}
+
+.pricing-price {
+  color: #016ff9;
+  font-size: 32px;
+  font-weight: 700;
+  display: block;
+}
+
+.pricing-button {
+  border: 1px solid #9dd1ff;
+  border-radius: 10px;
+  color: #348efe;
+  display: inline-block;
+  padding: 15px 35px;
+  text-decoration: none;
+  margin: 25px 0;
+  transition: background-color 200ms ease-in-out;
+}
+
+.pricing-button:hover, .pricing-button:focus {
+  background-color: #e1f1ff; 
+} 
+
+.pricing-button.is-featured {
+  background-color: #48aaff;
+  color: white;
+}
+
+.pricing-button.is-featured:hover, .pricing-button.is-featured:focus{
+  background-color: #269aff;
+  color: white;
+
+}
+
+@media (min-width: 900px) {
+  .panel {
+    flex-direction: row;
+  }
+  .pricing-plan {
+    border-bottom: none;
+    border-right: 1px solid #e1f1ff;
+    padding: 25px 50px;
+  
+  }
+
+  .pricing-plan:last-child {
+    border-right: none;
+  }
+
+  .pricing-features-item {
+    border-bottom: 1px solid #e1f1ff ;
+  }
+
+}
